@@ -8,9 +8,11 @@
     margin: 0;
 }
 
+html,
 body {
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
 }
 
 img, 
@@ -128,6 +130,7 @@ video {
     vertical-align: baseline;
 }
 
-ul {
+ul,
+nav {
     list-style: none;
 }

@@ -1,0 +1,43 @@
+/* --- GENERAL SETUP --- */
+:root {
+    /* Fonts */
+    --font-primary: 'Source Sans 3', sans-serif;
+    --font-secondary: 'Roboto', sans-serif;
+    /* Font weight */
+    --font-weight-regular: 400;
+    --font-weight-semi-bold: 600;
+    --font-weight-bold: 700;
+}
+
+body {
+    font-family: var(--font-primary);
+}
+
+/* --- NAV --- */
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8em;
+}
+
+.nav-items-container {
+    display: flex;
+    align-items: center;
+    margin: 1em 2em 1em 1.5em;
+}
+
+.nav-links {
+    display: flex;
+}
+
+.nav-link {
+    text-decoration: none;
+    margin-right: 1em;
+}
+
+.site-name {
+    font-family: var(--font-secondary);
+    font-weight: var(--font-weight-bold);
+    margin-left: 0.4em;
+}
