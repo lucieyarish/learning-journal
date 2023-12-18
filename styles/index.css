@@ -17,6 +17,23 @@ body {
     font-family: var(--font-primary);
 }
 
+/* --- TYPOGRAPHY --- */
+.hero-post-title {
+    font-weight: var(--font-weight-bold);
+    font-size: 2rem;
+    line-height: 1.2;
+    margin-bottom: 0.2em;
+}
+
+.post-title {
+    font-weight: var(--font-weight-bold);
+    font-size: 1.5rem;
+}
+
+.post-text {
+    color: var(--grey);
+}
+
 /* --- NAV --- */
 nav {
     display: grid;
@@ -70,18 +87,6 @@ a:visited {
     margin-bottom: 0.5em;
 }
 
-.hero-post-title {
-    font-weight: var(--font-weight-bold);
-    font-size: 2rem;
-    line-height: 1.2;
-    margin-bottom: 0.2em;
-}
-
-.post-title {
-    font-weight: var(--font-weight-bold);
-    font-size: 1.5rem;
-}
-
 .articles-container {
     padding: 0 1em;
 }
@@ -91,15 +96,27 @@ a:visited {
     margin: 2em 0 1em 0;
 }
 
-.post-text {
-    color: var(--grey);
-}
-
 .load-more-container {
     margin: 2em 0;
     text-align: center;
 }
 
 .load-more-btn {
+    font-weight: var(--font-weight-bold);
+}
+
+.footer {
+    background: var(--black);
+    color: var(--white);
+    text-align: center;
+    padding: 2em auto;
+}
+
+.footer-container {
+    padding: 3em;
+    font-size: 0.75em;
+}
+
+.footer-text-bold {
     font-weight: var(--font-weight-bold);
 }
