@@ -9,6 +9,7 @@
     --font-weight-bold: 700;
     /* Font colors */
     --black: #090909;
+    --white: #FFF;
 }
 
 body {
@@ -21,7 +22,7 @@ nav {
     grid-template-columns: 10% 50% 20% 20%;
     justify-content: center;
     align-items: center;
-    font-size: 0.85em;
+    font-size: 0.85rem;
     padding: 1.5em 1em;
 }
 
@@ -33,7 +34,7 @@ nav {
 .nav-link {
     text-decoration: none;
     text-transform: uppercase;
-    font-size: 0.8em;
+    font-size: 0.8rem;
     font-weight: var(--font-weight-semi-bold);
 }
 
@@ -50,4 +51,27 @@ nav {
     font-family: var(--font-secondary);
     font-weight: var(--font-weight-bold);
     margin-left: 0.4em;
+}
+
+/* --- ARTICLES --- */
+.hero-post {
+    background-image: url("../images/hero-post.jpg");
+    background-size: cover;
+    width: 100%;
+    color: var(--white);
+    padding: 6em 1em 1em 1em;
+}
+
+.hero-post-title {
+    font-weight: var(--font-weight-bold);
+    font-size: 2rem;
+    line-height: 1.2;
+    margin-bottom: 0.2em;
+}
+
+.post-date {
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    font-weight: var(--font-weight-regular);
+    margin-bottom: 0.5em;
 }
