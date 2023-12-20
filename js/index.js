@@ -2,49 +2,64 @@ import { articles } from './data.js';
 
 const heroArticleContainer = document.getElementById('hero-article-container');
 const allArticlesContainer = document.getElementById('all-articles-container');
-console.log(allArticlesContainer);
 
-const renderHeroArticle = () => {
+// HELPER FUNCTIONS
+const sortArticlesByDate = () => {
+  articles.sort((a, b) => b.date.getTime() - a.date.getTime());
+};
+
+sortArticlesByDate();
+
+const formatDate = (date) => {
+  const dateString = date.toDateString();
+  const monthAndYearDate = dateString.substring(dateString.indexOf(' ') + 1);
+  const dateWithComma = monthAndYearDate.replace(/(\s)(\d{4})/, ', $2');
+  return dateWithComma;
+};
+
+// TEMPLATE RENDERING FUNCTIONS
+const renderHeroArticle = (heroArticle) => {
+  const heroDate = formatDate(heroArticle.date);
   const html = `
-            <article class="hero-post">
-                <p class="post-date">July 23, 2023</p>
-                <h1 class="hero-post-title">My new journey as a bootcamp student</h1>
-                <p>
-                    After several months of learning in the Frontend Developer Career Path, 
-                    I've made the big jump over to the Bootcamp to get expert code reviews of my 
-                    Solo Projects projects and meet like-minded peers.
-                </p>
-            </article>
-    `;
+    <article data-id=${heroArticle.uuid} class="hero-post">
+        <p class="post-date">${heroDate}</p>
+        <h1 class="hero-post-title">${heroArticle.title}</h1>
+        <p>
+            ${heroArticle.content}
+        </p>
+    </article>
+`;
 
   heroArticleContainer.innerHTML += html;
 };
 
-//TODO: find more elegant solution for rendering newest as hero post
-//TODO: reverse order of articles - display newest first
 const renderArticles = () => {
-  const html = articles
-    .map((article) => {
-      return `
+  if (articles.length > 0 && articles !== undefined) {
+    renderHeroArticle(articles[0]);
+
+    const html = articles
+      .map((article, index) => {
+        const date = formatDate(article.date);
+        if (index > 0) {
+          return `
             <article data-id=${article.uuid}>
                 <img 
                     class="article-img" 
                     src="${article.image}" 
                     alt="${article.altText}">
-                    <p class="post-date">${article.date}</p>
+                    <p class="post-date">${date}</p>
                     <h2 class="post-title">${article.title}</h2>
                     <p class="post-text">
                         ${article.content}
                     </p>
             </article>
         `;
-    })
-    .join('');
+        }
+      })
+      .join('');
 
-  console.log(html);
-
-  allArticlesContainer.innerHTML += html;
+    allArticlesContainer.innerHTML += html;
+  }
 };
 
-renderHeroArticle();
 renderArticles();
