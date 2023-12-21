@@ -21,7 +21,7 @@ const formatDate = (date) => {
 const renderHeroArticle = (heroArticle) => {
   const heroDate = formatDate(heroArticle.date);
   const html = `
-    <a href="pages/article-detail.html#${heroArticle.slug}">
+    <a href="pages/article-detail.html#${heroArticle.slug}" class="article-link">
         <article data-id=${heroArticle.uuid} class="hero-post">
             <img 
                 class="article-img hidden" 
@@ -48,7 +48,7 @@ const renderArticles = () => {
         const date = formatDate(article.date);
         if (index > 0) {
           return `
-            <a href="pages/article-detail.html#${article.slug}">
+            <a href="pages/article-detail.html#${article.slug}" class="article-link">
                 <article data-id=${article.uuid}>
                     <img 
                         class="article-img" 

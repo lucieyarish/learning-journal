@@ -24,7 +24,7 @@ nav {
     justify-content: center;
     align-items: center;
     font-size: 0.85rem;
-    padding: 1.5em 1em;
+    padding: 1.5em 0.5em;
 }
 
 .logo {
@@ -55,12 +55,12 @@ a:visited {
 }
 
 /* --- VIEW MORE SECTION --- */
-.view-more-container {
+.load-more-container {
     margin: 2em 0;
     text-align: center;
 }
 
-.view-more-btn {
+.load-more-btn {
     font-weight: var(--font-weight-bold);
 }
 
