@@ -1,4 +1,5 @@
 import { articles } from '../js/data.js';
+import { formatDate } from './utils.js';
 
 const mainContainer = document.getElementById('main-container');
 
@@ -9,14 +10,14 @@ const renderArticle = () => {
 
   const article = articles.find((a) => a.slug === slug);
 
-  //TODO: Format date -> move date formatting func. into new file utils.js
+  const date = formatDate(article.date);
   const html = `
         <article data-id=${article.uuid} class="hero-post">
             <img 
                 class="article-img hidden" 
                 src="../${article.image}" 
                 alt="${article.altText}">
-            <p class="post-date">${article.date}</p>
+            <p class="post-date">${date}</p>
             <h1 class="hero-post-title">${article.title}</h1>
             <p>
                 ${article.content}
