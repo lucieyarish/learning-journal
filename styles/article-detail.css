@@ -1,0 +1,20 @@
+.post-title {
+    font-weight: var(--font-weight-bold);
+    font-size: 2rem;
+    line-height: 1.2;
+    margin-bottom: 0.2em;
+}
+
+.article-container {
+    margin: 1.5em 1.2em;
+}
+
+.subheading {
+    font-size: 1rem;
+    font-weight: var(--font-weight-bold);
+    margin-bottom: 1em;
+}
+
+.content-paragraph {
+    margin-bottom: 1em;
+}
