@@ -1,17 +1,11 @@
 import { articles } from './data.js';
-import { formatDate } from './utils.js';
+import { formatDate, sortArticlesByDate } from './utils.js';
 
 const heroArticleContainer = document.getElementById('hero-article-container');
 const allArticlesContainer = document.getElementById('all-articles-container');
 
-// HELPER FUNCTIONS
-const sortArticlesByDate = () => {
-  articles.sort((a, b) => b.date.getTime() - a.date.getTime());
-};
+sortArticlesByDate(articles);
 
-sortArticlesByDate();
-
-// TEMPLATE RENDERING FUNCTIONS
 const renderHeroArticle = (heroArticle) => {
   const heroDate = formatDate(heroArticle.date);
   const html = `

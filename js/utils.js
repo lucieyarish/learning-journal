@@ -4,3 +4,7 @@ export const formatDate = (date) => {
   const dateWithComma = monthAndYearDate.replace(/(\s)(\d{4})/, ', $2');
   return dateWithComma;
 };
+
+export const sortArticlesByDate = (articles) => {
+  articles.sort((a, b) => b.date.getTime() - a.date.getTime());
+};
