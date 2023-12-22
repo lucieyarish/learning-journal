@@ -1,5 +1,6 @@
 import { articles } from '../js/data.js';
 import { formatDate } from './utils.js';
+import { renderRecentPosts } from './common.js';
 
 const mainContainer = document.getElementById('main-container');
 
@@ -43,6 +44,10 @@ const renderArticle = () => {
   if (article.uuid === 'e36a8f90-b7cb-43e2-a609-0a6a466ecbc9') {
     const currentArticle = document.getElementById('article-container');
     currentArticle.innerHTML += renderAdditionalContent(article);
+  }
+
+  if (articles.length > 0) {
+    renderRecentPosts();
   }
 };
 
