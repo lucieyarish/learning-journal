@@ -1,4 +1,4 @@
-import { sortArticlesByDate, formatDate } from '../js/utils.js';
+import { sortArticlesByDate, formatDate, getSlugFromUrl } from '../js/utils.js';
 import { articles } from '../js/data.js';
 
 const header = document.getElementById('header');
@@ -27,11 +27,24 @@ const renderRecentPoststTitleTemplate = () => {
   `;
 };
 
-//TODO: rename
+const removeDisplayedArticleFromRecentPosts = (sortedArticles) => {
+  let hiddenArticleIndex;
+  const displayedArticleSlug = getSlugFromUrl();
+  hiddenArticleIndex = sortedArticles.findIndex(
+    (a) => a.slug === displayedArticleSlug
+  );
+  sortedArticles.splice(hiddenArticleIndex, 1);
+};
+
 export const renderMostRecentPosts = () => {
   const articleContainer = document.getElementById('article-container');
   articleContainer.innerHTML += renderRecentPoststTitleTemplate();
   const sortedArticles = sortArticlesByDate(articles);
+
+  if (window.location.pathname.includes('article-detail')) {
+    removeDisplayedArticleFromRecentPosts(sortedArticles);
+  }
+
   if (sortedArticles.length >= 3) {
     const html = sortedArticles
       .map((article, index) => {
@@ -58,6 +71,4 @@ export const renderMostRecentPosts = () => {
 
     articleContainer.innerHTML += html;
   }
-  //TODO: Case: article-detail -> make sure currently displayed post
-  //      doesn't get renedered among recent posts
 };

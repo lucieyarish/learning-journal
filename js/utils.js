@@ -8,3 +8,8 @@ export const formatDate = (date) => {
 export const sortArticlesByDate = (articles) => {
   return articles.sort((a, b) => b.date.getTime() - a.date.getTime());
 };
+
+export const getSlugFromUrl = () => {
+  const url = window.location.hash;
+  return url.slice(1);
+};

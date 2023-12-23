@@ -1,13 +1,8 @@
 import { articles } from '../js/data.js';
-import { formatDate } from './utils.js';
+import { formatDate, getSlugFromUrl } from './utils.js';
 import { renderMostRecentPosts } from './common.js';
 
 const mainContainer = document.getElementById('main-container');
-
-const getSlugFromUrl = () => {
-  const url = window.location.hash;
-  return url.slice(1);
-};
 
 const renderAdditionalContent = (article) => {
   const html = `
