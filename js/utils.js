@@ -6,5 +6,5 @@ export const formatDate = (date) => {
 };
 
 export const sortArticlesByDate = (articles) => {
-  articles.sort((a, b) => b.date.getTime() - a.date.getTime());
+  return articles.sort((a, b) => b.date.getTime() - a.date.getTime());
 };

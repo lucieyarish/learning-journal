@@ -1,3 +1,6 @@
+import { sortArticlesByDate, formatDate } from '../js/utils.js';
+import { articles } from '../js/data.js';
+
 const header = document.getElementById('header');
 const navBar = document.createElement('nav');
 const footer = document.getElementById('footer');
@@ -18,13 +21,43 @@ footer.innerHTML = `
   </div>
 `;
 
-export const renderRecentPosts = () => {
-  const articleContainer = document.getElementById('article-container');
-  const recentPostsHtml = `
+const renderRecentPoststTitleTemplate = () => {
+  return `
         <h3 class="subheading center-align">Recent posts</h3>
-    `;
-  //TODO: Render 3 most recent posts
+  `;
+};
+
+//TODO: rename
+export const renderMostRecentPosts = () => {
+  const articleContainer = document.getElementById('article-container');
+  articleContainer.innerHTML += renderRecentPoststTitleTemplate();
+  const sortedArticles = sortArticlesByDate(articles);
+  if (sortedArticles.length >= 3) {
+    const html = sortedArticles
+      .map((article, index) => {
+        if (index <= 2) {
+          const date = formatDate(article.date);
+          return `
+            <a href="/pages/article-detail.html#${article.slug}" class="article-link">
+                <article data-id=${article.uuid}>
+                    <img 
+                        class="article-img" 
+                        src="../${article.image}" 
+                        alt="${article.altText}">
+                    <p class="post-date">${date}</p>
+                    <h2 class="post-title">${article.title}</h2>
+                    <p class="post-text">
+                        ${article.content}
+                    </p>
+                </article>
+            </a>
+        `;
+        }
+      })
+      .join('');
+
+    articleContainer.innerHTML += html;
+  }
   //TODO: Case: article-detail -> make sure currently displayed post
   //      doesn't get renedered among recent posts
-  articleContainer.innerHTML += recentPostsHtml;
 };

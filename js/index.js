@@ -27,6 +27,9 @@ const renderHeroArticle = (heroArticle) => {
   heroArticleContainer.innerHTML += html;
 };
 
+//TODO: render 3 most recent articles
+//TODO: create custom func because if index === 0,
+//we want to renderHeroArticle & THEN render index 1-3
 const renderArticles = () => {
   if (articles.length > 0 && articles !== undefined) {
     renderHeroArticle(articles[0]);

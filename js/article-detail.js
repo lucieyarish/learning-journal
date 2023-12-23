@@ -1,6 +1,6 @@
 import { articles } from '../js/data.js';
 import { formatDate } from './utils.js';
-import { renderRecentPosts } from './common.js';
+import { renderMostRecentPosts } from './common.js';
 
 const mainContainer = document.getElementById('main-container');
 
@@ -47,7 +47,7 @@ const renderArticle = () => {
   }
 
   if (articles.length > 0) {
-    renderRecentPosts();
+    renderMostRecentPosts();
   }
 };
 

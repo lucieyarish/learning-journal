@@ -38,8 +38,3 @@
 .hidden {
     display: none;
 }
-
-.article-link {
-    text-decoration: none;
-    color: var(--black);
-}

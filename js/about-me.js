@@ -1,6 +1,6 @@
 import { aboutMe } from '../js/data.js';
 import { articles } from '../js/data.js';
-import { renderRecentPosts } from '../js/common.js';
+import { renderMostRecentPosts } from '../js/common.js';
 
 const mainContainer = document.getElementById('main-container');
 
@@ -22,7 +22,7 @@ const renderContent = () => {
   mainContainer.innerHTML = html;
 
   if (articles.length > 0) {
-    renderRecentPosts();
+    renderMostRecentPosts();
   }
 };
 

@@ -100,3 +100,8 @@ a:visited {
     border-radius: 3px;
     margin: 2em 0 1em 0;
 }
+
+.article-link {
+    text-decoration: none;
+    color: var(--black);
+}
