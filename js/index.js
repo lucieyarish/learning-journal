@@ -3,6 +3,7 @@ import { formatDate, sortArticlesByDate } from './utils.js';
 
 const heroArticleContainer = document.getElementById('hero-article-container');
 const allArticlesContainer = document.getElementById('all-articles-container');
+const loadMoreBtn = document.getElementById('load-more-btn');
 
 sortArticlesByDate(articles);
 
@@ -27,15 +28,22 @@ const renderHeroArticle = (heroArticle) => {
   heroArticleContainer.innerHTML += html;
 };
 
-const renderArticles = () => {
-  if (articles.length > 0 && articles !== undefined) {
-    renderHeroArticle(articles[0]);
+const renderRecentArticles = () => {
+  const recentArticles = articles.slice(1, 4);
+  renderArticles(recentArticles);
+};
 
-    const html = articles
-      .map((article, index) => {
-        const date = formatDate(article.date);
-        if (index > 0) {
-          return `
+const renderViewMoreArticles = () => {
+  const viewMoreArticles = articles.slice(4, articles.length);
+  renderArticles(viewMoreArticles);
+  loadMoreBtn.classList.add('hidden');
+};
+
+const renderArticles = (articlesToRender) => {
+  const html = articlesToRender
+    .map((article, index) => {
+      const date = formatDate(article.date);
+      return `
             <a href="pages/article-detail.html#${article.slug}" class="article-link">
                 <article data-id=${article.uuid}>
                     <img 
@@ -50,12 +58,17 @@ const renderArticles = () => {
                 </article>
             </a>
         `;
-        }
-      })
-      .join('');
+    })
+    .join('');
 
-    allArticlesContainer.innerHTML += html;
-  }
+  allArticlesContainer.innerHTML += html;
 };
 
-renderArticles();
+if (articles.length > 0 && articles !== undefined) {
+  renderHeroArticle(articles[0]);
+  renderRecentArticles();
+}
+
+loadMoreBtn.addEventListener('click', function () {
+  renderViewMoreArticles();
+});
