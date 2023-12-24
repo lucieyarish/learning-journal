@@ -39,8 +39,12 @@ nav {
     width: 24px;
 }
 
+.nav-link-logo,
 .nav-link {
     text-decoration: none;
+}
+
+.nav-link {
     text-transform: uppercase;
     font-size: 0.8rem;
     font-weight: var(--font-weight-semi-bold);

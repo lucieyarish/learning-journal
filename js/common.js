@@ -7,7 +7,7 @@ const footer = document.getElementById('footer');
 
 navBar.innerHTML = `
   <li class="logo"><img src="../images/logo-icon.png"></li>
-  <li class="site-name">Lucie's Learning Journal</li>
+  <a class="nav-link-logo"href="/"><li class="site-name">Lucie's Learning Journal</li></a>
   <li class="nav-link-first"><a href="/" class="nav-link">Home</a></li>
   <li><a href="/pages/about-me.html" class="nav-link">About Me</a></li>
 `;

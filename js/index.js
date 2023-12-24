@@ -3,7 +3,7 @@ import { formatDate, sortArticlesByDate } from './utils.js';
 
 const heroArticleContainer = document.getElementById('hero-article-container');
 const allArticlesContainer = document.getElementById('all-articles-container');
-const loadMoreBtn = document.getElementById('load-more-btn');
+const loadMoreContainer = document.getElementById('load-more-container');
 
 sortArticlesByDate(articles);
 
@@ -62,6 +62,10 @@ const renderArticles = (articlesToRender) => {
     .join('');
 
   allArticlesContainer.innerHTML += html;
+
+  if (articles.length > 4) {
+    loadMoreContainer.innerHTML += `<a href="#" id="load-more-btn" class="load-more-btn">View more</a>`;
+  }
 };
 
 if (articles.length > 0 && articles !== undefined) {
@@ -69,6 +73,6 @@ if (articles.length > 0 && articles !== undefined) {
   renderRecentArticles();
 }
 
-loadMoreBtn.addEventListener('click', function () {
+document.getElementById('load-more-btn').addEventListener('click', function () {
   renderViewMoreArticles();
 });
