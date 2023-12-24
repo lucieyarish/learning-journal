@@ -36,7 +36,7 @@ const renderRecentArticles = () => {
 const renderViewMoreArticles = () => {
   const viewMoreArticles = articles.slice(4, articles.length);
   renderArticles(viewMoreArticles);
-  loadMoreBtn.classList.add('hidden');
+  loadMoreContainer.classList.add('hidden');
 };
 
 const renderArticles = (articlesToRender) => {
