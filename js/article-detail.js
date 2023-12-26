@@ -2,6 +2,7 @@ import { articles } from '../js/data.js';
 import { formatDate, getSlugFromUrl } from './utils.js';
 import { renderMostRecentPosts } from './common.js';
 
+const HERO_ARTICLE_ID = 'e36a8f90-b7cb-43e2-a609-0a6a466ecbc9';
 const mainContainer = document.getElementById('main-container');
 
 const renderAdditionalContent = (article) => {
@@ -36,7 +37,7 @@ const renderArticle = () => {
 
   mainContainer.innerHTML = html;
 
-  if (article.uuid === 'e36a8f90-b7cb-43e2-a609-0a6a466ecbc9') {
+  if (article.uuid === HERO_ARTICLE_ID) {
     const currentArticle = document.getElementById('article-container');
     currentArticle.innerHTML += renderAdditionalContent(article);
   }
