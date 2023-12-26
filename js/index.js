@@ -16,11 +16,13 @@ const renderHeroArticle = (heroArticle) => {
                 class="article-img hidden" 
                 src="${heroArticle.image}" 
                 alt="${heroArticle.altText}">
-            <p class="post-date">${heroDate}</p>
-            <h1 class="hero-post-title">${heroArticle.title}</h1>
-            <p>
-                ${heroArticle.content}
-            </p>
+                <div class="hero-text">
+                  <p class="post-date">${heroDate}</p>
+                  <h1 class="hero-post-title">${heroArticle.title}</h1>
+                  <p>
+                      ${heroArticle.content}
+                  </p>
+                </div>
         </article>
     </a>
 `;
@@ -29,12 +31,23 @@ const renderHeroArticle = (heroArticle) => {
 };
 
 const renderRecentArticles = () => {
-  const recentArticles = articles.slice(1, 4);
+  let recentArticles;
+  if (window.matchMedia('(min-width: 1024px)')) {
+    recentArticles = articles.slice(1, 7);
+  } else {
+    recentArticles = articles.slice(1, 4);
+  }
+
   renderArticles(recentArticles);
 };
 
 const renderViewMoreArticles = () => {
-  const viewMoreArticles = articles.slice(4, articles.length);
+  let viewMoreArticles;
+  if (window.matchMedia('(min-width: 1024px)')) {
+    viewMoreArticles = articles.slice(7, articles.length);
+  } else {
+    viewMoreArticles = articles.slice(4, articles.length);
+  }
   renderArticles(viewMoreArticles);
   loadMoreContainer.classList.add('hidden');
 };

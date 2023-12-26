@@ -38,3 +38,38 @@
 .hidden {
     display: none;
 }
+
+@media (min-width: 768px) {
+    .hero-post {
+        padding-top: 12em;
+    }
+
+    .hero-text {
+        padding: 1em;
+        max-width: 90%;
+    }
+
+    .articles-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+        padding: 0 2em 1em 2em;
+    }
+}
+
+@media (min-width: 1024px) {
+    .hero-post {
+        padding-top: 20em;
+    }
+
+    .hero-text {
+        padding: 2.5em;
+        max-width: 65%;
+    }
+
+    .articles-container {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+        padding: 0 2em 1em 2em;
+    }
+}
