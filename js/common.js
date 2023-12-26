@@ -40,6 +40,8 @@ const removeDisplayedArticleFromRecentPosts = (sortedArticles) => {
 
 export const renderMostRecentPosts = () => {
   const articleContainer = document.getElementById('article-container');
+  const recentArticlesContainer = document.createElement('div');
+  recentArticlesContainer.classList.add('recent-articles-container');
   articleContainer.innerHTML += renderRecentPoststTitleTemplate();
   const sortedArticles = sortArticlesByDate(articles);
 
@@ -60,7 +62,7 @@ export const renderMostRecentPosts = () => {
                         src="../${article.image}" 
                         alt="${article.altText}">
                     <p class="post-date">${date}</p>
-                    <h2 class="post-title">${article.title}</h2>
+                    <h2 class="post-title post-title-small">${article.title}</h2>
                     <p class="post-text">
                         ${article.content}
                     </p>
@@ -71,6 +73,7 @@ export const renderMostRecentPosts = () => {
       })
       .join('');
 
-    articleContainer.innerHTML += html;
+    recentArticlesContainer.innerHTML += html;
+    articleContainer.appendChild(recentArticlesContainer);
   }
 };

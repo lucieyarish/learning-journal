@@ -22,3 +22,33 @@
 .center-align {
     text-align: center;
 }
+
+@media (min-width: 768px) {
+    main {
+        background: var(--light-grey);
+        padding: 2em;
+    }
+
+    .subheading {
+        font-size: 1.3rem;
+    }
+
+    .content-paragraph {
+        font-size: 1.1rem;
+    }
+
+    .recent-articles-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
+    }
+
+    .post-title-small {
+        font-size: 1.5rem;
+    }
+
+    .subheading {
+        margin-top: 2em;
+        margin-bottom: 0;
+    }
+}
