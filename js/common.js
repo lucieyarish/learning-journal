@@ -6,8 +6,10 @@ const navBar = document.createElement('nav');
 const footer = document.getElementById('footer');
 
 navBar.innerHTML = `
+<div class="logo-container">
   <li class="logo"><img src="../images/logo-icon.png"></li>
   <a class="nav-link-logo"href="/"><li class="site-name">Lucie's Learning Journal</li></a>
+</div>
   <li class="nav-link-first"><a href="/" class="nav-link">Home</a></li>
   <li><a href="/pages/about-me.html" class="nav-link">About Me</a></li>
 `;

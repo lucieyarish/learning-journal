@@ -27,11 +27,16 @@ body {
 /* --- NAV --- */
 nav {
     display: grid;
-    grid-template-columns: 10% 50% 20% 20%;
+    grid-template-columns: 60% 20% 20%;
     justify-content: center;
     align-items: center;
     font-size: 0.85rem;
     padding: 1.5em 0.5em;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
 }
 
 .logo {
@@ -85,7 +90,7 @@ a:visited {
 }
 
 .footer-container {
-    padding: 3em;
+    padding: 2em;
     font-size: 0.75em;
 }
 
@@ -108,4 +113,19 @@ a:visited {
 .article-link {
     text-decoration: none;
     color: var(--black);
+}
+
+@media(min-width: 768px) {
+    .logo-container {
+        margin-left: 2em;
+    }
+
+    nav {
+        grid-template-columns: 80% 10% 10%;
+    }
+
+    .nav-link-logo,
+    .nav-link {
+        font-size: 1rem;
+    }
 }
