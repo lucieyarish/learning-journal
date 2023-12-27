@@ -1,5 +1,8 @@
 .profile-photo {
-    max-width: 200px;
+    max-width: 160px;
+    border-radius: 50%;
+    margin-right: 2em;
+    margin-bottom: 2em;
 }
 
 .title {
@@ -15,4 +18,34 @@
 
 .text {
     margin: 1em auto;
+}
+
+@media (min-width: 768px) {
+    .intro-section {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-areas: 
+        "p p p h h h h h h h h h"
+        ". . . t t t t t t t t t";
+        justify-items: center;
+        /* grid-template-columns: 25% 75%; */
+    }
+
+    .profile-photo {
+        grid-row: 1 / -1;
+    }
+
+    .title {
+        grid-column: 2 / -1;
+        margin-top: 0.5em;
+    }
+
+    .intro {
+        grid-column: 2 / -1;
+    }
+
+    .content-section {
+        padding: 0 4em;
+    }
+    
 }

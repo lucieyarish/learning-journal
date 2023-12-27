@@ -34,7 +34,7 @@
     }
 
     .content-paragraph {
-        font-size: 1.1rem;
+        font-size: 1.2rem;
     }
 
     .recent-articles-container {
@@ -50,5 +50,9 @@
     .subheading {
         margin-top: 2em;
         margin-bottom: 0;
+    }
+
+    .article-content {
+        padding: 0 4em;
     }
 }
