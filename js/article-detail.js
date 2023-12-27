@@ -22,9 +22,8 @@ const renderAdditionalContent = (article) => {
 const renderArticle = () => {
   const slug = getSlugFromUrl();
   const article = articles.find((a) => a.slug === slug);
-
-  //TODO: display full month name
   const date = formatDate(article.date);
+
   const html = `
         <article id="article-container" data-id=${article.uuid} class="article-container">
           <div class="article-content">
