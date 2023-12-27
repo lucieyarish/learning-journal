@@ -2,19 +2,38 @@ import { sortArticlesByDate, formatDate, getSlugFromUrl } from '../js/utils.js';
 import { articles } from '../js/data.js';
 
 const header = document.getElementById('header');
+const hamburgerMenu = document.createElement('div');
 const navBar = document.createElement('nav');
 const footer = document.getElementById('footer');
+
+hamburgerMenu.innerHTML = `
+    <div id="hamburger-wrapper" class="hamburger-wrapper">
+      <p class="hamburger"></p>
+    </div>
+`;
+
+header.appendChild(hamburgerMenu);
 
 navBar.innerHTML = `
 <div class="logo-container">
   <li class="logo"><img src="../images/logo-icon.png"></li>
   <a class="nav-link-logo"href="/"><li class="site-name">Lucie's Learning Journal</li></a>
 </div>
+<div id="nav-links" class="nav-links">
   <li class="nav-link-first"><a href="/" class="nav-link">Home</a></li>
   <li><a href="/pages/about-me.html" class="nav-link">About Me</a></li>
+</div>
 `;
 
 header.appendChild(navBar);
+
+const hamburgerWrapper = document.getElementById('hamburger-wrapper');
+
+hamburgerWrapper.addEventListener('click', function () {
+  hamburgerWrapper.classList.toggle('open');
+  const navLinks = document.getElementById('nav-links');
+  navLinks.classList.toggle('active');
+});
 
 footer.innerHTML = `
   <div class="footer-container">

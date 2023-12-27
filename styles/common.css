@@ -25,19 +25,101 @@ body {
     flex-direction: column;
 }
 
+/* --- HAMBURGER MENU --- */
+.hamburger-wrapper {
+    background-color: var(--white);
+    display: flex;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    margin: 0;
+    padding: 0;
+    float: right;
+    margin: 0.5em 0.5em 0.5em auto;
+}
+
+.hamburger {
+    position: relative;
+}
+
+.hamburger,
+.hamburger:before,
+.hamburger:after {
+    padding: 0;
+    background-color: var(--black);
+    border-radius: 3px;
+    width: 70%;
+    height: 4px;
+    transition: margin .1s .2s, transform .2s;
+}
+
+.hamburger:before,
+.hamburger:after {
+    margin: 0;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.hamburger:before {
+    margin-top: -10px;
+}
+
+.hamburger:after {
+    margin-top: 10px;
+}
+
+.open .hamburger {
+    transform: rotate(45deg);
+}
+  
+.open .hamburger,
+.open .hamburger:before,
+.open .hamburger:after {
+    transition: margin .2s, transform .1s .2s;
+}
+  
+.open .hamburger:before,
+.open .hamburger:after {
+    margin-top: 0;
+}
+  
+.open .hamburger:after {
+    transform: rotate(-90deg)
+}
+ 
 /* --- NAV --- */
 nav {
     display: grid;
-    grid-template-columns: 60% 20% 20%;
+    grid-template-columns: 80% 20%;
     justify-content: center;
     align-items: center;
     font-size: 0.85rem;
-    padding: 1.5em 0.5em;
+    padding: 1.5em 0.5em 0.75em 0.5em;
+}
+
+.nav-links {
+    display: none;
+    gap: 15px;
+}
+
+.nav-links.active {
+    display: flex;
+    flex-direction: column;
+    animation: fade .5s;
+}
+
+@keyframes fade {
+    from{transform: translateX(-70px); opacity: 0;}
+    to {transform: translateX(0px); opacity: 1;}
 }
 
 .logo-container {
     display: flex;
     align-items: center;
+    align-self: start;
 }
 
 .logo {
@@ -121,8 +203,14 @@ a:visited {
         margin-left: 2em;
     }
 
+    .hamburger-wrapper {
+        display: none;
+    }
+
     nav {
-        grid-template-columns: 80% 10% 10%;
+        display: grid;
+        grid-template-columns: 80% 20%;
+        transition: none;
     }
 
     .nav-link-logo,
