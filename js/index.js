@@ -19,7 +19,7 @@ const renderHeroArticle = (heroArticle) => {
                 <div class="hero-text">
                   <p class="post-date">${heroDate}</p>
                   <h1 class="hero-post-title">${heroArticle.title}</h1>
-                  <p>
+                  <p class="hero-content">
                       ${heroArticle.content}
                   </p>
                 </div>

@@ -55,6 +55,10 @@
         gap: 30px;
         padding: 0 2em 1em 2em;
     }
+
+    .post-date {
+        font-size: 0.9rem;
+    }
 }
 
 @media (min-width: 1024px) {
@@ -71,5 +75,17 @@
         grid-template-columns: repeat(3, 1fr);
         gap: 30px;
         padding: 0 2em 1em 2em;
+    }
+
+    .post-date {
+        font-size: 1rem;
+    }
+
+    .post-text {
+        font-size: 1.2rem;
+    }
+
+    .hero-content {
+        font-size: 1.3rem;
     }
 }
