@@ -57,7 +57,7 @@ const renderArticle = (slug) => {
   }
 
   if (articles.length > 0) {
-    renderMostRecentPosts();
+    renderMostRecentPosts(slug);
   }
 };
 

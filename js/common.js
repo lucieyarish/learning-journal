@@ -48,16 +48,19 @@ const renderRecentPoststTitleTemplate = () => {
   `;
 };
 
-const removeDisplayedArticleFromRecentPosts = (sortedArticles) => {
+const removeDisplayedArticleFromRecentPosts = (
+  sortedArticles,
+  displayedArticleSlug
+) => {
   let hiddenArticleIndex;
-  const displayedArticleSlug = getSlugFromUrl();
+  console.log(displayedArticleSlug);
   hiddenArticleIndex = sortedArticles.findIndex(
     (a) => a.slug === displayedArticleSlug
   );
   sortedArticles.splice(hiddenArticleIndex, 1);
 };
 
-export const renderMostRecentPosts = () => {
+export const renderMostRecentPosts = (slug) => {
   const articleContainer = document.getElementById('article-container');
   const recentArticlesContainer = document.createElement('div');
   recentArticlesContainer.classList.add('recent-articles-container');
@@ -65,7 +68,7 @@ export const renderMostRecentPosts = () => {
   const sortedArticles = sortArticlesByDate(articles);
 
   if (window.location.pathname.includes('article-detail')) {
-    removeDisplayedArticleFromRecentPosts(sortedArticles);
+    removeDisplayedArticleFromRecentPosts(sortedArticles, slug);
   }
 
   if (sortedArticles.length >= 3) {
