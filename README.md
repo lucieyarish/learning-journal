@@ -42,7 +42,7 @@ built while learning essential HTML, CSS and JavaScript concepts through Scrimba
 ##### Desktop
 <img width="511" alt="Screenshot 2023-12-29 at 21 42 51" src="https://github.com/lucieyarish/learning-journal/assets/79669599/3daa6c45-da86-4dde-8914-fd95c18da7da">
 <img width="511" alt="Screenshot 2023-12-29 at 21 42 56" src="https://github.com/lucieyarish/learning-journal/assets/79669599/519e7aaf-554b-4124-98bd-a8064fdafe29">
-<img width="571" alt="Screenshot 2023-12-29 at 21 44 09" src="https://github.com/lucieyarish/learning-journal/assets/79669599/96989c8b-9b72-4052-a327-12c67a76931e">
+<img width="511" alt="Screenshot 2023-12-29 at 21 44 09" src="https://github.com/lucieyarish/learning-journal/assets/79669599/96989c8b-9b72-4052-a327-12c67a76931e">
 
 ### Links
 
