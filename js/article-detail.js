@@ -5,6 +5,15 @@ import { renderMostRecentPosts } from './common.js';
 const HERO_ARTICLE_ID = 'e36a8f90-b7cb-43e2-a609-0a6a466ecbc9';
 const mainContainer = document.getElementById('main-container');
 
+document.addEventListener('click', (event) => {
+  const targetAnchor = event.target.closest('a.article-link');
+
+  if (targetAnchor) {
+    const slug = targetAnchor.hash.slice(1);
+    renderArticle(slug);
+  }
+});
+
 const renderAdditionalContent = (article) => {
   const html = `
       <div class="article-content">
@@ -19,8 +28,7 @@ const renderAdditionalContent = (article) => {
   return html;
 };
 
-const renderArticle = () => {
-  const slug = getSlugFromUrl();
+const renderArticle = (slug) => {
   const article = articles.find((a) => a.slug === slug);
   const date = formatDate(article.date);
 
@@ -50,4 +58,4 @@ const renderArticle = () => {
   }
 };
 
-renderArticle();
+renderArticle(getSlugFromUrl());
