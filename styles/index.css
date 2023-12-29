@@ -49,6 +49,11 @@
         max-width: 90%;
     }
 
+    .hero-text:hover,
+    .hero-text:focus {
+        color: rgb(165, 163, 163);
+    }
+
     .articles-container {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
