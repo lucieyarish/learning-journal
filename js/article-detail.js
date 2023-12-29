@@ -12,6 +12,9 @@ document.addEventListener('click', (event) => {
     const slug = targetAnchor.hash.slice(1);
     renderArticle(slug);
   }
+
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
 });
 
 const renderAdditionalContent = (article) => {
