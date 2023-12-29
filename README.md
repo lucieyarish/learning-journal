@@ -36,13 +36,13 @@ built while learning essential HTML, CSS and JavaScript concepts through Scrimba
 <img width="290" alt="Screenshot 2023-12-29 at 21 43 52" src="https://github.com/lucieyarish/learning-journal/assets/79669599/d8d3b5b8-d811-4bd3-a97b-aeac98c400b7">
 
 ##### Tablet
-<img width="536" alt="Screenshot 2023-12-29 at 21 43 09" src="https://github.com/lucieyarish/learning-journal/assets/79669599/25a11418-bdb1-4f7f-8320-b4cee59f8381">
-<img width="536" alt="Screenshot 2023-12-29 at 21 43 13" src="https://github.com/lucieyarish/learning-journal/assets/79669599/d343b8bf-0fe8-410a-879d-5e1d9315ab03">
+<img width="400" alt="Screenshot 2023-12-29 at 21 43 09" src="https://github.com/lucieyarish/learning-journal/assets/79669599/25a11418-bdb1-4f7f-8320-b4cee59f8381">
+<img width="400" alt="Screenshot 2023-12-29 at 21 43 13" src="https://github.com/lucieyarish/learning-journal/assets/79669599/d343b8bf-0fe8-410a-879d-5e1d9315ab03">
 
 ##### Desktop
-<img width="711" alt="Screenshot 2023-12-29 at 21 42 51" src="https://github.com/lucieyarish/learning-journal/assets/79669599/3daa6c45-da86-4dde-8914-fd95c18da7da">
-<img width="711" alt="Screenshot 2023-12-29 at 21 42 56" src="https://github.com/lucieyarish/learning-journal/assets/79669599/519e7aaf-554b-4124-98bd-a8064fdafe29">
-<img width="771" alt="Screenshot 2023-12-29 at 21 44 09" src="https://github.com/lucieyarish/learning-journal/assets/79669599/96989c8b-9b72-4052-a327-12c67a76931e">
+<img width="511" alt="Screenshot 2023-12-29 at 21 42 51" src="https://github.com/lucieyarish/learning-journal/assets/79669599/3daa6c45-da86-4dde-8914-fd95c18da7da">
+<img width="511" alt="Screenshot 2023-12-29 at 21 42 56" src="https://github.com/lucieyarish/learning-journal/assets/79669599/519e7aaf-554b-4124-98bd-a8064fdafe29">
+<img width="571" alt="Screenshot 2023-12-29 at 21 44 09" src="https://github.com/lucieyarish/learning-journal/assets/79669599/96989c8b-9b72-4052-a327-12c67a76931e">
 
 ### Links
 
