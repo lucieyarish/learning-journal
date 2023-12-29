@@ -104,7 +104,6 @@ nav {
 .nav-links {
     display: none;
     gap: 15px;
-    color: var(--black);
 }
 
 .nav-links.active {
@@ -137,6 +136,7 @@ nav {
     text-transform: uppercase;
     font-size: 0.8rem;
     font-weight: var(--font-weight-semi-bold);
+    color: var(--black);
 }
 
 .nav-link:hover,
