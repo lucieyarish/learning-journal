@@ -104,6 +104,7 @@ nav {
 .nav-links {
     display: none;
     gap: 15px;
+    color: var(--black);
 }
 
 .nav-links.active {
