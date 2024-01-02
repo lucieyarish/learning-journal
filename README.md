@@ -17,7 +17,7 @@ Responsive, mobile-first, learning journal website consisting of three pages: ho
 - [Acknowledgements](#acknowledgements)
 
 ## Overview
-built while learning essential HTML, CSS and JavaScript concepts through Scrimba's [Frontend Career Path courses](https://scrimba.com/learn/frontend). Figma design was provided by Scrimba, the app was built from scratch by me.
+This project was built while learning essential HTML, CSS and JavaScript concepts through Scrimba's [Frontend Career Path courses](https://scrimba.com/learn/frontend). Figma design was provided by Scrimba, the app was built from scratch by me.
 
 ### The Challenge
 #### Basic Requirements
